@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dollar Cost Averaging: invertir de forma constante, sin adivinar el mercado — Academia de Inversión</title>
+<meta name="description" content="Qué es el Dollar Cost Averaging (promediar el coste), cómo funciona, sus ventajas frente a intentar acertar el mejor momento para invertir, y sus límites.">
+<meta name="keywords" content="dollar cost averaging, promediar costo, DCA inversión, invertir cada mes, aportaciones periódicas">
+<meta name="author" content="Academia de Inversión">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.academiadeinversion.com/blog/dollar-cost-averaging.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.academiadeinversion.com/blog/dollar-cost-averaging.html">
+<meta property="og:title" content="Dollar Cost Averaging: invertir de forma constante, sin adivinar el mercado">
+<meta property="og:description" content="Cómo funciona el Dollar Cost Averaging y por qué ayuda a mantener la constancia al invertir.">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dollar Cost Averaging: invertir de forma constante, sin adivinar el mercado">
+<meta name="twitter:description" content="Cómo funciona esta estrategia de aportaciones periódicas.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23101C2C'/%3E%3Cpath d='M20 68 L38 48 L52 60 L80 28' stroke='%23B8863E' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../blog.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Dollar Cost Averaging: invertir de forma constante, sin adivinar el mercado",
+  "description": "Qué es el Dollar Cost Averaging, cómo funciona y sus ventajas y límites frente a invertir todo de golpe.",
+  "author": {"@type": "Organization", "name": "Academia de Inversión"},
+  "publisher": {"@type": "Organization", "name": "Academia de Inversión"},
+  "mainEntityOfPage": "https://www.academiadeinversion.com/blog/dollar-cost-averaging.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.academiadeinversion.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.academiadeinversion.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "Dollar Cost Averaging", "item": "https://www.academiadeinversion.com/blog/dollar-cost-averaging.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿El Dollar Cost Averaging siempre da mejor resultado que invertir todo de golpe?", "acceptedAnswer": {"@type": "Answer", "text": "No necesariamente. Si el mercado sube de forma sostenida, invertir todo el capital de golpe suele dar mejor resultado matemático. El DCA no busca maximizar el resultado, sino reducir el riesgo de invertir todo justo antes de una caída y facilitar la constancia."}},
+    {"@type": "Question", "name": "¿Cada cuánto tiempo se debe aportar con esta estrategia?", "acceptedAnswer": {"@type": "Answer", "text": "No hay una única periodicidad correcta. Lo habitual es mensual, ajustado al ciclo de ingresos de cada persona, aunque también se aplica de forma quincenal o trimestral."}},
+    {"@type": "Question", "name": "¿Es una estrategia solo para principiantes?", "acceptedAnswer": {"@type": "Answer", "text": "No. Muchos inversores experimentados también automatizan aportaciones periódicas, precisamente para reducir la influencia de las emociones en el momento de invertir."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar" aria-label="Navegación principal">
+    <a href="../index.html" class="brand">
+      <svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="20" fill="currentColor" class="brand-bg"/><path d="M20 68 L38 48 L52 60 L80 28" stroke="var(--color-brass)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Academia<em>de Inversión</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#que-es-invertir">Qué es invertir</a></li>
+      <li><a href="../index.html#errores">Errores comunes</a></li>
+      <li><a href="../index.html#faq">FAQ</a></li>
+      <li><a href="index.html">Blog</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo claro/oscuro" aria-pressed="false">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main>
+<nav class="breadcrumbs" aria-label="Migas de pan">
+  <a href="../index.html">Inicio</a> / <a href="index.html">Blog</a> / <span aria-current="page">Dollar Cost Averaging</span>
+</nav>
+
+<article>
+  <header class="article-header">
+    <p class="eyebrow">Estrategia</p>
+    <h1>Dollar Cost Averaging: invertir de forma constante, sin adivinar el mercado</h1>
+    <div class="article-meta">
+      <span>Actualizado 2026</span>
+      <span>7 min de lectura</span>
+      <span>Nivel: principiante</span>
+    </div>
+  </header>
+
+  <div class="article-toc">
+    <p>Contenido</p>
+    <ol>
+      <li><a href="#definicion">Qué es el Dollar Cost Averaging</a></li>
+      <li><a href="#como-funciona">Cómo funciona con un ejemplo</a></li>
+      <li><a href="#ventajas">Por qué reduce el estrés de invertir</a></li>
+      <li><a href="#limites">Sus límites: no es magia</a></li>
+      <li><a href="#dca-vs-todo">DCA frente a invertir todo de golpe</a></li>
+      <li><a href="#como-aplicarlo">Cómo aplicarlo en la práctica</a></li>
+      <li><a href="#conclusion">Conclusión</a></li>
+      <li><a href="#faq">Preguntas frecuentes</a></li>
+    </ol>
+  </div>
+
+  <div class="article-body">
+    <h2 id="definicion">Qué es el Dollar Cost Averaging</h2>
+    <p>El Dollar Cost Averaging (DCA), o "promediar el coste" en español, consiste en invertir una cantidad fija de dinero de forma periódica —por ejemplo, cada mes— en lugar de invertir una suma grande de una sola vez. Al comprar siempre el mismo importe, cuando el precio del activo está más bajo se adquieren más participaciones, y cuando está más alto, se adquieren menos, lo que suaviza el precio medio de compra a lo largo del tiempo.</p>
+
+    <figure class="article-illustration">
+      <svg width="640" height="210" viewBox="0 0 640 210" role="img" aria-labelledby="ilustTitle5">
+        <title id="ilustTitle5">Aportes mensuales fijos comprando más o menos participaciones según el precio</title>
+        <line x1="40" y1="180" x2="600" y2="180" stroke="#5c6b7a" stroke-width="1"/>
+        <polyline points="40,120 150,90 260,150 370,60 480,110 590,40" fill="none" stroke="#5c6b7a" stroke-width="2" stroke-dasharray="4,4"/>
+        <g fill="#a8763a">
+          <rect x="32" y="150" width="16" height="30"/>
+          <rect x="142" y="140" width="16" height="40"/>
+          <rect x="252" y="160" width="16" height="20"/>
+          <rect x="362" y="135" width="16" height="45"/>
+          <rect x="472" y="145" width="16" height="35"/>
+          <rect x="582" y="130" width="16" height="50"/>
+        </g>
+        <text x="40" y="200" font-size="12" fill="#5c6b7a">Aporte fijo cada mes, precio variable → más o menos participaciones</text>
+      </svg>
+      <figcaption>La línea punteada es el precio; las barras son las participaciones compradas cada mes con el mismo importe.</figcaption>
+    </figure>
+
+    <h2 id="como-funciona">Cómo funciona con un ejemplo</h2>
+    <p>Supongamos que inviertes 200 € al mes en un ETF durante cuatro meses, a precios de 20 €, 16 €, 25 € y 18 € por participación:</p>
+    <ul>
+      <li>Mes 1: 200 € ÷ 20 € = 10 participaciones</li>
+      <li>Mes 2: 200 € ÷ 16 € = 12,5 participaciones</li>
+      <li>Mes 3: 200 € ÷ 25 € = 8 participaciones</li>
+      <li>Mes 4: 200 € ÷ 18 € = 11,1 participaciones</li>
+    </ul>
+    <p>En total, con 800 € invertidos, terminas con 41,6 participaciones a un precio medio de compra de unos 19,2 €, en lugar del precio final de 18 € o el más alto de 25 €. El resultado exacto depende de cómo se mueva el precio, pero la lógica de fondo se mantiene: comprar siempre el mismo importe reparte el riesgo de comprar justo en un mal momento.</p>
+
+    <h2 id="ventajas">Por qué reduce el estrés de invertir</h2>
+    <p>Una de las mayores ventajas del DCA no es matemática, sino psicológica: elimina la presión de intentar "acertar" el mejor momento para invertir, algo que ni siquiera los profesionales logran de forma consistente. Al automatizar aportes periódicos, se reduce la tentación de actuar por miedo o euforia, dos de los <a class="inline-link" href="../index.html#errores">errores más comunes</a> al invertir.</p>
+
+    <div class="article-callout">
+      <strong>Idea clave:</strong> el DCA no promete el mejor resultado posible; promete un proceso más sostenible, que es más fácil de mantener durante años que intentar predecir el mercado.
+    </div>
+
+    <h2 id="limites">Sus límites: no es magia</h2>
+    <p>El DCA no elimina el riesgo de mercado ni garantiza rentabilidad. Si el precio de un activo cae de forma sostenida durante mucho tiempo, seguir aportando de forma constante no evitará las pérdidas latentes, aunque sí puede mejorar el precio medio de compra frente a haber invertido todo de golpe en el peor momento posible.</p>
+
+    <h2 id="dca-vs-todo">DCA frente a invertir todo de golpe</h2>
+    <p>Estudios históricos sobre mercados con tendencia alcista de largo plazo muestran que invertir todo el capital disponible de una sola vez suele superar, en promedio, al DCA —simplemente porque el dinero pasa más tiempo invertido. Sin embargo, el DCA reduce el riesgo de invertir una suma grande justo antes de una caída fuerte, y resulta más práctico para quien invierte parte de su salario mes a mes, en lugar de partir de un capital grande disponible de golpe.</p>
+
+    <h2 id="como-aplicarlo">Cómo aplicarlo en la práctica</h2>
+    <ol>
+      <li>Define un importe fijo que puedas mantener de forma sostenible, no solo cuando "sobra dinero".</li>
+      <li>Automatiza la aportación para que no dependa de una decisión manual cada mes.</li>
+      <li>Mantén el plan también en los meses en que el mercado cae: ahí es, matemáticamente, cuando el DCA compra más barato.</li>
+      <li>Revisa el plan solo si cambian tus circunstancias financieras, no en función del ánimo del mercado.</li>
+    </ol>
+
+    <h2 id="conclusion">Conclusión</h2>
+    <p>El Dollar Cost Averaging es, ante todo, una herramienta de comportamiento: convierte la inversión en un hábito automático en lugar de una decisión que depende del estado de ánimo o de intentar predecir el mercado. No es la estrategia matemáticamente óptima en todos los escenarios, pero suele ser una de las más sostenibles para mantener durante los años que realmente marcan la diferencia.</p>
+  </div>
+
+  <div class="article-faq" id="faq">
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿El Dollar Cost Averaging siempre da mejor resultado que invertir todo de golpe?</summary>
+      <p>No necesariamente. Si el mercado sube de forma sostenida, invertir todo el capital de golpe suele dar mejor resultado matemático. El DCA no busca maximizar el resultado, sino reducir el riesgo de invertir todo justo antes de una caída y facilitar la constancia.</p>
+    </details>
+    <details>
+      <summary>¿Cada cuánto tiempo se debe aportar con esta estrategia?</summary>
+      <p>No hay una única periodicidad correcta. Lo habitual es mensual, ajustado al ciclo de ingresos de cada persona, aunque también se aplica de forma quincenal o trimestral.</p>
+    </details>
+    <details>
+      <summary>¿Es una estrategia solo para principiantes?</summary>
+      <p>No. Muchos inversores experimentados también automatizan aportaciones periódicas, precisamente para reducir la influencia de las emociones en el momento de invertir.</p>
+    </details>
+  </div>
+
+  <div class="related-articles">
+    <h2>Sigue aprendiendo</h2>
+    <ul>
+      <li><a href="interes-compuesto.html">Interés compuesto: la fuerza silenciosa detrás de la riqueza a largo plazo</a></li>
+      <li><a href="como-empezar-con-poco-dinero.html">Cómo empezar a invertir con poco dinero</a></li>
+      <li><a href="diversificacion.html">Diversificación: por qué no conviene poner todos los huevos en la misma cesta</a></li>
+    </ul>
+  </div>
+
+  <p class="article-disclaimer">Este artículo tiene fines exclusivamente educativos e informativos. No constituye asesoramiento financiero personalizado. Los ejemplos numéricos son ilustrativos y no representan una rentabilidad garantizada.</p>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span>Academia<em>de Inversión</em></span>
+      <p>Educación financiera clara, sin jerga y sin promesas.</p>
+    </div>
+    <nav class="footer-links" aria-label="Enlaces del pie de página">
+      <a href="../index.html#que-es-invertir">Qué es invertir</a>
+      <a href="../index.html#etfs">ETFs históricos</a>
+      <a href="../index.html#calculadoras">Calculadoras</a>
+      <a href="index.html">Blog</a>
+      <a href="../privacy-policy.html">Privacidad y cookies</a>
+    </nav>
+  </div>
+  <div class="legal-notice">
+    <p><strong>Aviso legal:</strong> Todo el contenido de este sitio tiene fines exclusivamente educativos e informativos. No constituye asesoramiento financiero, fiscal ni legal personalizado. Invertir implica riesgos, incluyendo la posible pérdida parcial o total del capital invertido.</p>
+    <p>© <span id="year"></span> Academia de Inversión. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <p>Usamos cookies propias y de terceros (incluido Google AdSense) para analizar el tráfico y mostrar publicidad. Más información en nuestra <a href="../privacy-policy.html">Política de privacidad y cookies</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-ghost" id="cookieReject">Rechazar</button>
+    <button class="btn btn-primary" id="cookieAccept">Aceptar</button>
+  </div>
+</div>
+
+<script src="../blog.js" defer></script>
+</body>
+</html>

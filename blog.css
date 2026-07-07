@@ -1,0 +1,131 @@
+/* ==========================================================================
+   blog.css — Estilos ADITIVOS para el blog de Academia de Inversión.
+   Este archivo NO reemplaza a style.css: se carga junto a él en cada
+   página del blog y solo añade los componentes específicos de artículos
+   (migas de pan, tabla de contenidos, tarjetas de listado, buscador...).
+   Usa las mismas variables (--bg, --text, --accent, etc.) definidas en
+   style.css, así que hereda automáticamente el modo claro/oscuro.
+   ========================================================================== */
+
+/* ---------- Breadcrumbs ---------- */
+.breadcrumbs {
+  max-width: 780px; margin: 0 auto; padding: 7.5rem 1.5rem 0;
+  font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);
+}
+.breadcrumbs a { color: var(--text-muted); border-bottom: 1px solid transparent; }
+.breadcrumbs a:hover { color: var(--accent); border-color: var(--accent); }
+.breadcrumbs span[aria-current] { color: var(--text); }
+
+/* ---------- Article shell ---------- */
+.article-header {
+  max-width: 780px; margin: 0 auto; padding: 1.5rem 1.5rem 2.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.article-header .eyebrow { margin-bottom: 1rem; }
+.article-header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.15; margin-bottom: 1rem;
+}
+.article-meta {
+  display: flex; flex-wrap: wrap; gap: 0.9rem; font-family: var(--font-mono);
+  font-size: 0.78rem; color: var(--text-muted);
+}
+.article-meta span::before { content: "·"; margin-right: 0.9rem; color: var(--accent); }
+.article-meta span:first-child::before { content: none; margin-right: 0; }
+
+.article-body { max-width: 780px; margin: 0 auto; padding: 2.5rem 1.5rem 1rem; }
+.article-body h2 {
+  font-size: 1.4rem; margin: 2.4rem 0 1rem; scroll-margin-top: 90px;
+}
+.article-body h3 { font-size: 1.1rem; margin: 1.6rem 0 0.7rem; scroll-margin-top: 90px; }
+.article-body p { color: var(--text); font-size: 1.02rem; margin-bottom: 1.1rem; max-width: 68ch; }
+.article-body ul, .article-body ol { margin: 0 0 1.2rem 1.3rem; max-width: 68ch; }
+.article-body li { margin-bottom: 0.4rem; color: var(--text); }
+.article-body strong { color: var(--text); }
+.article-body a.inline-link { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+
+.article-callout {
+  background: var(--bg-alt); border-left: 3px solid var(--accent); border-radius: var(--radius-sm);
+  padding: 1rem 1.2rem; margin: 1.6rem 0; font-size: 0.94rem; color: var(--text-muted); max-width: 68ch;
+}
+.article-callout strong { color: var(--text); }
+
+.article-illustration { margin: 2rem 0; text-align: center; }
+.article-illustration svg { max-width: 100%; height: auto; }
+.article-illustration figcaption { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.6rem; font-family: var(--font-mono); }
+
+/* ---------- Table of contents ---------- */
+.article-toc {
+  max-width: 780px; margin: 0 auto 2rem; background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 1.3rem 1.5rem;
+}
+.article-toc p { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0.7rem; }
+.article-toc ol { list-style: none; margin: 0; counter-reset: toc; }
+.article-toc li { counter-increment: toc; margin-bottom: 0.4rem; font-size: 0.92rem; }
+.article-toc li::before { content: counter(toc) "."; color: var(--accent); font-family: var(--font-mono); margin-right: 0.5em; }
+.article-toc a { color: var(--text-muted); }
+.article-toc a:hover { color: var(--text); }
+
+/* ---------- Article FAQ ---------- */
+.article-faq { max-width: 780px; margin: 2rem auto; }
+.article-faq h2 { font-size: 1.3rem; margin-bottom: 1rem; }
+.article-faq details {
+  border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.9rem 1.1rem; margin-bottom: 0.7rem;
+  background: var(--card-bg);
+}
+.article-faq summary { font-weight: 600; cursor: pointer; font-size: 0.96rem; }
+.article-faq p { margin: 0.7rem 0 0; color: var(--text-muted); font-size: 0.92rem; }
+
+/* ---------- Internal links / related ---------- */
+.related-articles {
+  max-width: 780px; margin: 2.5rem auto; padding-top: 2rem; border-top: 1px solid var(--border);
+}
+.related-articles h2 { font-size: 1.1rem; margin-bottom: 1rem; }
+.related-articles ul { list-style: none; margin: 0; display: grid; gap: 0.6rem; }
+.related-articles a {
+  display: block; padding: 0.8rem 1rem; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  font-size: 0.92rem; transition: border-color 0.2s;
+}
+.related-articles a:hover { border-color: var(--accent); }
+
+/* ---------- Article footer disclaimer ---------- */
+.article-disclaimer {
+  max-width: 780px; margin: 0 auto 4rem; font-size: 0.78rem; color: var(--text-muted);
+  font-family: var(--font-mono); padding: 1rem 1.5rem; border-top: 1px solid var(--border);
+}
+
+/* ---------- Blog index (listing) ---------- */
+.blog-hero { max-width: var(--container); margin: 0 auto; padding: 8.5rem 1.5rem 2rem; }
+.blog-hero h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 0.8rem; }
+.blog-hero p { color: var(--text-muted); max-width: 55ch; font-size: 1.02rem; }
+
+.blog-search { max-width: var(--container); margin: 0 auto 2.5rem; padding: 0 1.5rem; }
+.blog-search input {
+  width: 100%; max-width: 420px; background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 0.8rem 1rem; color: var(--text); font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+.blog-search input:focus { border-color: var(--accent); }
+
+.blog-grid {
+  max-width: var(--container); margin: 0 auto; padding: 0 1.5rem 5rem;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.4rem;
+}
+.blog-card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; transition: transform 0.2s ease;
+}
+.blog-card:hover { transform: translateY(-3px); }
+.blog-card .blog-card-tag {
+  font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent);
+}
+.blog-card h2 { font-size: 1.05rem; }
+.blog-card p { font-size: 0.88rem; color: var(--text-muted); flex: 1; }
+.blog-card .blog-card-meta { font-size: 0.74rem; color: var(--text-muted); font-family: var(--font-mono); }
+.blog-empty { text-align: center; color: var(--text-muted); padding: 2rem; display: none; }
+.blog-empty.is-visible { display: block; }
+
+@media (max-width: 600px) {
+  .breadcrumbs, .article-header, .article-body, .article-toc, .article-faq, .related-articles, .article-disclaimer {
+    padding-left: 1.1rem; padding-right: 1.1rem;
+  }
+}
