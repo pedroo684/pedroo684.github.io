@@ -1,0 +1,5 @@
+# ads.txt
+# Sustituye la línea de abajo por la que te proporciona AdSense
+# (Configuración > "ads.txt" dentro de tu cuenta de AdSense).
+# El pub-XXXXXXXXXXXXXXXX debe ser tu ID de editor real.
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

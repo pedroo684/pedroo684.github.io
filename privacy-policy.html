@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de privacidad y cookies — Academia de Inversión</title>
+<meta name="description" content="Política de privacidad y cookies de Academia de Inversión: qué datos se recogen, uso de cookies y publicidad de terceros como Google AdSense.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.academiadeinversion.com/privacy-policy.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar" aria-label="Navegación principal">
+    <a href="index.html" class="brand">
+      <svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="20" fill="currentColor" class="brand-bg"/><path d="M20 68 L38 48 L52 60 L80 28" stroke="var(--color-brass)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Academia<em>de Inversión</em></span>
+    </a>
+    <ul class="nav-links" style="position:static; transform:none; flex-direction:row; padding:0; background:transparent;">
+      <li><a href="index.html">← Volver al inicio</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="section" style="max-width:780px; margin:0 auto; padding-top:9rem;">
+  <h1 style="font-size:2rem; margin-bottom:1.5rem;">Política de privacidad y cookies</h1>
+  <p style="color:var(--text-muted); margin-bottom:2rem;">Última actualización: <span id="lastUpdated"></span></p>
+
+  <section style="margin-bottom:2rem;">
+    <h2 style="font-size:1.2rem; margin-bottom:0.6rem;">1. Responsable del sitio</h2>
+    <p style="color:var(--text-muted);">Academia de Inversión ("nosotros") es un proyecto educativo. Para cualquier consulta sobre esta política puedes escribir a <strong>[tu-email-de-contacto@dominio.com]</strong>.</p>
+  </section>
+
+  <section style="margin-bottom:2rem;">
+    <h2 style="font-size:1.2rem; margin-bottom:0.6rem;">2. Qué datos recogemos</h2>
+    <p style="color:var(--text-muted);">Este sitio no requiere registro ni recoge datos personales directamente a través de formularios. Las calculadoras funcionan enteramente en tu navegador: los importes que introduces no se envían a ningún servidor ni se almacenan.</p>
+  </section>
+
+  <section style="margin-bottom:2rem;">
+    <h2 style="font-size:1.2rem; margin-bottom:0.6rem;">3. Cookies y publicidad</h2>
+    <p style="color:var(--text-muted);">Utilizamos <strong>Google AdSense</strong> para mostrar publicidad. Google y sus socios pueden usar cookies y tecnologías similares para mostrar anuncios basados en tus visitas anteriores a este u otros sitios web. Puedes inhabilitar la publicidad personalizada visitando los <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">ajustes de anuncios de Google</a>.</p>
+    <p style="color:var(--text-muted); margin-top:0.6rem;">Si rechazas las cookies en el aviso de este sitio, retiramos los espacios publicitarios de la página para esa sesión.</p>
+  </section>
+
+  <section style="margin-bottom:2rem;">
+    <h2 style="font-size:1.2rem; margin-bottom:0.6rem;">4. Terceros</h2>
+    <p style="color:var(--text-muted);">Este sitio puede cargar recursos de terceros (tipografías de Google Fonts, la librería Chart.js y el servicio de anuncios de Google AdSense) que pueden establecer sus propias cookies conforme a sus propias políticas de privacidad.</p>
+  </section>
+
+  <section style="margin-bottom:2rem;">
+    <h2 style="font-size:1.2rem; margin-bottom:0.6rem;">5. Tus derechos</h2>
+    <p style="color:var(--text-muted);">Si resides en el Espacio Económico Europeo, tienes derecho a acceder, rectificar, eliminar y limitar el uso de tus datos, así como a retirar tu consentimiento en cualquier momento a través de los enlaces indicados arriba.</p>
+  </section>
+
+  <section style="margin-bottom:2rem;">
+    <h2 style="font-size:1.2rem; margin-bottom:0.6rem;">6. Aviso legal sobre el contenido</h2>
+    <p style="color:var(--text-muted);">Todo el contenido de Academia de Inversión es educativo e informativo. No constituye asesoramiento financiero personalizado. Invertir implica riesgos, incluyendo la posible pérdida del capital.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="legal-notice">
+    <p>© <span id="year"></span> Academia de Inversión. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+</script>
+</body>
+</html>
