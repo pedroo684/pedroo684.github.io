@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Qué es un índice bursátil? S&P 500, Nasdaq y más explicados — Academia de Inversión</title>
+<meta name="description" content="Qué es un índice bursátil, cómo se calcula, para qué sirve como termómetro del mercado y por qué muchos ETFs se limitan a replicarlo.">
+<meta name="keywords" content="qué es un índice bursátil, índice de mercado, S&P 500 qué es, Nasdaq qué es, cómo funciona un índice">
+<meta name="author" content="Academia de Inversión">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.academiadeinversion.com/blog/que-es-un-indice.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.academiadeinversion.com/blog/que-es-un-indice.html">
+<meta property="og:title" content="¿Qué es un índice bursátil? S&P 500, Nasdaq y más explicados">
+<meta property="og:description" content="Cómo se calcula un índice bursátil y por qué sirve como termómetro del mercado.">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="¿Qué es un índice bursátil?">
+<meta name="twitter:description" content="Cómo funciona un índice y por qué tantos ETFs lo replican.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23101C2C'/%3E%3Cpath d='M20 68 L38 48 L52 60 L80 28' stroke='%23B8863E' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../blog.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "¿Qué es un índice bursátil? S&P 500, Nasdaq y más explicados",
+  "description": "Qué es un índice bursátil, cómo se calcula y por qué sirve como termómetro del mercado.",
+  "author": {"@type": "Organization", "name": "Academia de Inversión"},
+  "publisher": {"@type": "Organization", "name": "Academia de Inversión"},
+  "mainEntityOfPage": "https://www.academiadeinversion.com/blog/que-es-un-indice.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.academiadeinversion.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.academiadeinversion.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "¿Qué es un índice bursátil?", "item": "https://www.academiadeinversion.com/blog/que-es-un-indice.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Puedo invertir directamente en un índice?", "acceptedAnswer": {"@type": "Answer", "text": "No de forma directa: un índice es una referencia estadística, no un producto que se compre. Lo habitual es invertir en un ETF o fondo indexado que replica ese índice."}},
+    {"@type": "Question", "name": "¿Todos los índices se calculan igual?", "acceptedAnswer": {"@type": "Answer", "text": "No. Algunos ponderan las empresas por capitalización de mercado (como el S&P 500), otros por el precio de la acción (como el Dow Jones), lo que puede dar resultados distintos ante el mismo movimiento del mercado."}},
+    {"@type": "Question", "name": "¿Un índice puede llegar a cero?", "acceptedAnswer": {"@type": "Answer", "text": "Es extremadamente improbable en índices amplios y diversificados, ya que requeriría que todas las empresas que lo componen perdieran prácticamente todo su valor al mismo tiempo."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar" aria-label="Navegación principal">
+    <a href="../index.html" class="brand">
+      <svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="20" fill="currentColor" class="brand-bg"/><path d="M20 68 L38 48 L52 60 L80 28" stroke="var(--color-brass)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Academia<em>de Inversión</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#conceptos">Conceptos</a></li>
+      <li><a href="../index.html#etfs">ETFs</a></li>
+      <li><a href="../index.html#faq">FAQ</a></li>
+      <li><a href="index.html">Blog</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo claro/oscuro" aria-pressed="false">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main>
+<nav class="breadcrumbs" aria-label="Migas de pan">
+  <a href="../index.html">Inicio</a> / <a href="index.html">Blog</a> / <span aria-current="page">¿Qué es un índice bursátil?</span>
+</nav>
+
+<article>
+  <header class="article-header">
+    <p class="eyebrow">Conceptos básicos</p>
+    <h1>¿Qué es un índice bursátil? S&amp;P 500, Nasdaq y más explicados</h1>
+    <div class="article-meta">
+      <span>Actualizado 2026</span>
+      <span>7 min de lectura</span>
+      <span>Nivel: principiante</span>
+    </div>
+  </header>
+
+  <div class="article-toc">
+    <p>Contenido</p>
+    <ol>
+      <li><a href="#definicion">Qué es un índice bursátil</a></li>
+      <li><a href="#como-se-calcula">Cómo se calcula, sin fórmulas complicadas</a></li>
+      <li><a href="#ponderacion">Por qué la ponderación importa</a></li>
+      <li><a href="#indices-conocidos">Los índices más conocidos</a></li>
+      <li><a href="#indice-vs-etf">Índice vs. ETF: no son lo mismo</a></li>
+      <li><a href="#para-que-sirve">Para qué sirve seguir un índice</a></li>
+      <li><a href="#conclusion">Conclusión</a></li>
+      <li><a href="#faq">Preguntas frecuentes</a></li>
+    </ol>
+  </div>
+
+  <div class="article-body">
+    <h2 id="definicion">Qué es un índice bursátil</h2>
+    <p>Un índice bursátil es una lista de empresas cotizadas seleccionadas según criterios definidos —tamaño, sector, país— que se combinan en un único número para representar, de forma resumida, cómo se está comportando ese conjunto de mercado. Cuando se dice que "la bolsa ha subido un 1% hoy", normalmente se está hablando del movimiento de un índice concreto, no de todas las empresas del mundo.</p>
+
+    <figure class="article-illustration">
+      <svg width="640" height="200" viewBox="0 0 640 200" role="img" aria-labelledby="ilustTitle8">
+        <title id="ilustTitle8">Muchas empresas resumidas en un único número índice</title>
+        <g fill="none" stroke="#5c6b7a" stroke-width="2">
+          <rect x="60" y="30" width="34" height="34" rx="4"/>
+          <rect x="110" y="30" width="34" height="34" rx="4"/>
+          <rect x="160" y="30" width="34" height="34" rx="4"/>
+          <rect x="210" y="30" width="34" height="34" rx="4"/>
+          <rect x="260" y="30" width="34" height="34" rx="4"/>
+        </g>
+        <text x="60" y="90" font-size="12" fill="#5c6b7a">500 empresas</text>
+        <path d="M340 47 L420 47" stroke="#5c6b7a" stroke-width="2" marker-end="url(#arrow2)"/>
+        <defs><marker id="arrow2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5c6b7a"/></marker></defs>
+        <rect x="440" y="15" width="160" height="66" rx="10" fill="none" stroke="#a8763a" stroke-width="3"/>
+        <text x="460" y="55" font-size="18" fill="#a8763a" font-weight="600">6.100 pts</text>
+      </svg>
+      <figcaption>Un índice resume el comportamiento conjunto de muchas empresas en un solo número.</figcaption>
+    </figure>
+
+    <h2 id="como-se-calcula">Cómo se calcula, sin fórmulas complicadas</h2>
+    <p>Cada índice sigue una metodología propia, pero la idea general es combinar el precio o la capitalización de las empresas que lo componen en un único valor de referencia, que se actualiza en tiempo real durante el horario de mercado. Ese valor no tiene un significado absoluto en sí mismo —lo relevante es su evolución en el tiempo, no el número concreto en un momento dado.</p>
+
+    <h2 id="ponderacion">Por qué la ponderación importa</h2>
+    <p>La mayoría de los índices más seguidos, como el S&amp;P 500, ponderan a cada empresa según su capitalización de mercado: cuanto más grande es la empresa, más peso tiene en el resultado del índice. Esto significa que un mal día de unas pocas empresas muy grandes puede mover el índice más que un mal día de muchas empresas pequeñas juntas.</p>
+
+    <h2 id="indices-conocidos">Los índices más conocidos</h2>
+    <ul>
+      <li><strong>S&amp;P 500:</strong> las 500 mayores empresas cotizadas de Estados Unidos, de todos los sectores.</li>
+      <li><strong>Nasdaq-100:</strong> las 100 mayores empresas no financieras del Nasdaq, con fuerte peso tecnológico.</li>
+      <li><strong>Dow Jones:</strong> 30 grandes empresas estadounidenses, ponderado por precio en lugar de capitalización.</li>
+      <li><strong>MSCI World:</strong> miles de empresas de mercados desarrollados de todo el mundo.</li>
+    </ul>
+    <p>Puedes consultar datos históricos aproximados de ETFs que replican varios de estos índices en nuestra <a class="inline-link" href="../index.html#etfs">sección de ETFs históricos</a>.</p>
+
+    <h2 id="indice-vs-etf">Índice vs. ETF: no son lo mismo</h2>
+    <p>Un índice es, en sí mismo, una referencia estadística: no se puede comprar directamente. Lo que sí se puede comprar es un ETF o fondo indexado diseñado para replicar ese índice lo más fielmente posible. Cuando alguien dice "invierto en el S&amp;P 500", en realidad suele estar invirtiendo en un ETF, como VOO o IVV, que sigue ese índice.</p>
+
+    <div class="article-callout">
+      <strong>Idea clave:</strong> el índice es el mapa; el ETF es el vehículo que recorre ese mapa. Puedes profundizar en cómo funciona ese vehículo en nuestro artículo sobre <a class="inline-link" href="que-es-un-etf.html">qué es un ETF</a>.
+    </div>
+
+    <h2 id="para-que-sirve">Para qué sirve seguir un índice</h2>
+    <p>Los índices sirven como referencia (<em>benchmark</em>) para evaluar si una inversión concreta lo está haciendo mejor o peor que "el mercado" en su conjunto, y también como base para construir productos indexados de bajo coste que buscan replicar ese comportamiento en lugar de intentar superarlo mediante gestión activa.</p>
+
+    <h2 id="conclusion">Conclusión</h2>
+    <p>Un índice bursátil es, ante todo, una herramienta de medición: resume el comportamiento de un conjunto de empresas en un solo número que sirve de referencia para el mercado. Entender cómo se construye —y qué empresas pesan más— ayuda a interpretar mejor las noticias financieras y a comprender qué es exactamente lo que se replica al invertir en un ETF indexado.</p>
+  </div>
+
+  <div class="article-faq" id="faq">
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Puedo invertir directamente en un índice?</summary>
+      <p>No de forma directa: un índice es una referencia estadística, no un producto que se compre. Lo habitual es invertir en un ETF o fondo indexado que replica ese índice.</p>
+    </details>
+    <details>
+      <summary>¿Todos los índices se calculan igual?</summary>
+      <p>No. Algunos ponderan las empresas por capitalización de mercado (como el S&amp;P 500), otros por el precio de la acción (como el Dow Jones), lo que puede dar resultados distintos ante el mismo movimiento del mercado.</p>
+    </details>
+    <details>
+      <summary>¿Un índice puede llegar a cero?</summary>
+      <p>Es extremadamente improbable en índices amplios y diversificados, ya que requeriría que todas las empresas que lo componen perdieran prácticamente todo su valor al mismo tiempo.</p>
+    </details>
+  </div>
+
+  <div class="related-articles">
+    <h2>Sigue aprendiendo</h2>
+    <ul>
+      <li><a href="que-es-un-etf.html">¿Qué es un ETF y por qué es ideal para empezar?</a></li>
+      <li><a href="que-es-un-fondo-indexado.html">¿Qué es un fondo indexado?</a></li>
+      <li><a href="que-es-una-accion.html">¿Qué es una acción?</a></li>
+    </ul>
+  </div>
+
+  <p class="article-disclaimer">Este artículo tiene fines exclusivamente educativos e informativos. No constituye asesoramiento financiero personalizado. Invertir implica riesgos, incluida la posible pérdida del capital.</p>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span>Academia<em>de Inversión</em></span>
+      <p>Educación financiera clara, sin jerga y sin promesas.</p>
+    </div>
+    <nav class="footer-links" aria-label="Enlaces del pie de página">
+      <a href="../index.html#que-es-invertir">Qué es invertir</a>
+      <a href="../index.html#etfs">ETFs históricos</a>
+      <a href="../index.html#calculadoras">Calculadoras</a>
+      <a href="index.html">Blog</a>
+      <a href="../privacy-policy.html">Privacidad y cookies</a>
+    </nav>
+  </div>
+  <div class="legal-notice">
+    <p><strong>Aviso legal:</strong> Todo el contenido de este sitio tiene fines exclusivamente educativos e informativos. No constituye asesoramiento financiero, fiscal ni legal personalizado. Invertir implica riesgos, incluyendo la posible pérdida parcial o total del capital invertido.</p>
+    <p>© <span id="year"></span> Academia de Inversión. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <p>Usamos cookies propias y de terceros (incluido Google AdSense) para analizar el tráfico y mostrar publicidad. Más información en nuestra <a href="../privacy-policy.html">Política de privacidad y cookies</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-ghost" id="cookieReject">Rechazar</button>
+    <button class="btn btn-primary" id="cookieAccept">Aceptar</button>
+  </div>
+</div>
+
+<script src="../blog.js" defer></script>
+</body>
+</html>
