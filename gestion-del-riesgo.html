@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestión del riesgo: cómo aplicarla a tu cartera en la práctica — Academia de Inversión</title>
+<meta name="description" content="Técnicas prácticas de gestión del riesgo al invertir: tamaño de posición, asignación de activos, colchón de liquidez y cuándo revisar una estrategia.">
+<meta name="keywords" content="gestión del riesgo inversión, cómo gestionar el riesgo, asignación de activos, tamaño de posición, control de riesgo cartera">
+<meta name="author" content="Academia de Inversión">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.academiadeinversion.com/blog/gestion-del-riesgo.html">
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.academiadeinversion.com/blog/gestion-del-riesgo.html">
+<meta property="og:title" content="Gestión del riesgo: cómo aplicarla a tu cartera en la práctica">
+<meta property="og:description" content="Técnicas prácticas de gestión del riesgo al invertir, más allá de la teoría.">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gestión del riesgo: cómo aplicarla a tu cartera en la práctica">
+<meta name="twitter:description" content="Técnicas prácticas de gestión del riesgo, explicadas sin jerga.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23101C2C'/%3E%3Cpath d='M20 68 L38 48 L52 60 L80 28' stroke='%23B8863E' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../blog.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Gestión del riesgo: cómo aplicarla a tu cartera en la práctica",
+  "description": "Técnicas prácticas de gestión del riesgo al invertir: tamaño de posición, asignación de activos, colchón de liquidez y revisión de estrategia.",
+  "author": {"@type": "Organization", "name": "Academia de Inversión"},
+  "publisher": {"@type": "Organization", "name": "Academia de Inversión"},
+  "mainEntityOfPage": "https://www.academiadeinversion.com/blog/gestion-del-riesgo.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.academiadeinversion.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.academiadeinversion.com/blog/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "Gestión del riesgo", "item": "https://www.academiadeinversion.com/blog/gestion-del-riesgo.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿Qué es el tamaño de posición?", "acceptedAnswer": {"@type": "Answer", "text": "Es la proporción del capital total destinada a un activo concreto. Limitar el tamaño de posición en activos de mayor riesgo es una forma directa de controlar cuánto puede afectar un único activo al conjunto de la cartera."}},
+    {"@type": "Question", "name": "¿Cuánto colchón de liquidez es razonable mantener?", "acceptedAnswer": {"@type": "Answer", "text": "Depende de cada situación personal, pero un rango habitual citado es entre tres y seis meses de gastos básicos, ajustado según la estabilidad de ingresos y las circunstancias de cada persona."}},
+    {"@type": "Question", "name": "¿La gestión del riesgo garantiza no perder dinero?", "acceptedAnswer": {"@type": "Answer", "text": "No. Ninguna técnica de gestión del riesgo elimina la posibilidad de pérdidas; su objetivo es limitar el impacto de los peores escenarios y evitar decisiones que agraven las pérdidas."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar" aria-label="Navegación principal">
+    <a href="../index.html" class="brand">
+      <svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="20" fill="currentColor" class="brand-bg"/><path d="M20 68 L38 48 L52 60 L80 28" stroke="var(--color-brass)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Academia<em>de Inversión</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#portafolios">Portafolios</a></li>
+      <li><a href="../index.html#faq">FAQ</a></li>
+      <li><a href="index.html">Blog</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo claro/oscuro" aria-pressed="false">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main>
+<nav class="breadcrumbs" aria-label="Migas de pan">
+  <a href="../index.html">Inicio</a> / <a href="index.html">Blog</a> / <span aria-current="page">Gestión del riesgo</span>
+</nav>
+
+<article>
+  <header class="article-header">
+    <p class="eyebrow">Gestión del riesgo</p>
+    <h1>Gestión del riesgo: cómo aplicarla a tu cartera en la práctica</h1>
+    <div class="article-meta">
+      <span>Actualizado 2026</span>
+      <span>8 min de lectura</span>
+      <span>Nivel: intermedio</span>
+    </div>
+  </header>
+
+  <div class="article-toc">
+    <p>Contenido</p>
+    <ol>
+      <li><a href="#de-teoria-a-practica">De entender el riesgo a gestionarlo</a></li>
+      <li><a href="#asignacion">Asignación de activos según tu perfil</a></li>
+      <li><a href="#tamano-posicion">Tamaño de posición</a></li>
+      <li><a href="#colchon">Mantener un colchón de liquidez</a></li>
+      <li><a href="#diversificacion-practica">Diversificación aplicada, no solo teórica</a></li>
+      <li><a href="#revision">Cuándo y cómo revisar la estrategia</a></li>
+      <li><a href="#conclusion">Conclusión</a></li>
+      <li><a href="#faq">Preguntas frecuentes</a></li>
+    </ol>
+  </div>
+
+  <div class="article-body">
+    <h2 id="de-teoria-a-practica">De entender el riesgo a gestionarlo</h2>
+    <p>Entender qué es el <a class="inline-link" href="riesgo.html">riesgo</a> es el primer paso; gestionarlo de forma activa es el siguiente. La gestión del riesgo no busca eliminarlo —algo imposible al invertir— sino mantenerlo dentro de límites que cada persona pueda asumir sin comprometer sus objetivos ni tomar decisiones impulsivas.</p>
+
+    <figure class="article-illustration">
+      <svg width="640" height="190" viewBox="0 0 640 190" role="img" aria-labelledby="ilustTitleGr">
+        <title id="ilustTitleGr">Cuatro pilares prácticos de la gestión del riesgo</title>
+        <g fill="none" stroke="#a8763a" stroke-width="3">
+          <rect x="40" y="40" width="130" height="80" rx="10"/>
+          <rect x="190" y="40" width="130" height="80" rx="10"/>
+          <rect x="340" y="40" width="130" height="80" rx="10"/>
+          <rect x="490" y="40" width="130" height="80" rx="10"/>
+        </g>
+        <text x="55" y="85" font-size="12" fill="#5c6b7a">Asignación</text>
+        <text x="205" y="85" font-size="12" fill="#5c6b7a">Tamaño posición</text>
+        <text x="360" y="85" font-size="12" fill="#5c6b7a">Colchón</text>
+        <text x="505" y="85" font-size="12" fill="#5c6b7a">Diversificar</text>
+      </svg>
+      <figcaption>Cuatro palancas prácticas que, combinadas, forman la base de la gestión del riesgo.</figcaption>
+    </figure>
+
+    <h2 id="asignacion">Asignación de activos según tu perfil</h2>
+    <p>La asignación de activos —cuánto peso dar a renta variable, renta fija, efectivo u otros activos— es probablemente la decisión con mayor impacto en el nivel de riesgo global de una cartera, por encima de qué ETF o acción concretos se elijan dentro de cada categoría. Ajustarla según tu <a class="inline-link" href="horizonte-temporal.html">horizonte temporal</a> es el punto de partida.</p>
+
+    <h2 id="tamano-posicion">Tamaño de posición</h2>
+    <p>Limitar qué porcentaje del capital total se destina a un único activo, especialmente en instrumentos de mayor riesgo o volatilidad, evita que un solo evento negativo tenga un impacto desproporcionado sobre el conjunto del patrimonio. No existe una cifra universal, pero muchos inversores establecen límites máximos explícitos por posición como parte de su plan.</p>
+
+    <div class="article-callout">
+      <strong>Ejemplo:</strong> limitar cualquier activo individual de alta volatilidad a un porcentaje reducido del total de la cartera —por ejemplo, un 5%— acota el impacto máximo posible de una caída severa en ese activo concreto.
+    </div>
+
+    <h2 id="colchon">Mantener un colchón de liquidez</h2>
+    <p>Disponer de un colchón de ahorro en efectivo para imprevistos reduce la probabilidad de verse obligado a vender inversiones en un mal momento de mercado ante una necesidad urgente de dinero, lo que en la práctica es una forma indirecta —pero efectiva— de gestión del riesgo.</p>
+
+    <h2 id="diversificacion-practica">Diversificación aplicada, no solo teórica</h2>
+    <p>Más allá de entender el concepto de <a class="inline-link" href="diversificacion.html">diversificación</a>, aplicarla implica revisar de forma periódica si la cartera realmente está repartida entre activos con comportamientos distintos, y no solo acumulando posiciones que, en la práctica, se mueven de forma muy parecida entre sí.</p>
+
+    <h2 id="revision">Cuándo y cómo revisar la estrategia</h2>
+    <p>La gestión del riesgo no es un ejercicio de una sola vez: conviene revisar la estrategia cuando cambian las circunstancias personales —un cambio de horizonte, de ingresos, de objetivos— y no en función de movimientos puntuales del mercado, que suelen invitar a decisiones más emocionales que racionales.</p>
+
+    <h2 id="conclusion">Conclusión</h2>
+    <p>Gestionar el riesgo de forma práctica combina varias palancas —asignación de activos, tamaño de posición, colchón de liquidez y diversificación real— más que depender de una sola técnica. Ninguna de ellas elimina el riesgo, pero juntas ayudan a mantenerlo dentro de un rango que se pueda sostener sin comprometer los objetivos financieros ni la tranquilidad personal.</p>
+  </div>
+
+  <div class="article-faq" id="faq">
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Qué es el tamaño de posición?</summary>
+      <p>Es la proporción del capital total destinada a un activo concreto. Limitar el tamaño de posición en activos de mayor riesgo es una forma directa de controlar cuánto puede afectar un único activo al conjunto de la cartera.</p>
+    </details>
+    <details>
+      <summary>¿Cuánto colchón de liquidez es razonable mantener?</summary>
+      <p>Depende de cada situación personal, pero un rango habitual citado es entre tres y seis meses de gastos básicos, ajustado según la estabilidad de ingresos y las circunstancias de cada persona.</p>
+    </details>
+    <details>
+      <summary>¿La gestión del riesgo garantiza no perder dinero?</summary>
+      <p>No. Ninguna técnica de gestión del riesgo elimina la posibilidad de pérdidas; su objetivo es limitar el impacto de los peores escenarios y evitar decisiones que agraven las pérdidas.</p>
+    </details>
+  </div>
+
+  <div class="related-articles">
+    <h2>Sigue aprendiendo</h2>
+    <ul>
+      <li><a href="riesgo.html">Riesgo: qué significa realmente al invertir</a></li>
+      <li><a href="como-construir-un-portafolio.html">Cómo construir un portafolio de inversión</a></li>
+      <li><a href="rebalanceo.html">Rebalanceo: cómo mantener tu cartera en su rumbo</a></li>
+    </ul>
+  </div>
+
+  <p class="article-disclaimer">Este artículo tiene fines exclusivamente educativos e informativos. No constituye asesoramiento financiero personalizado.</p>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span>Academia<em>de Inversión</em></span>
+      <p>Educación financiera clara, sin jerga y sin promesas.</p>
+    </div>
+    <nav class="footer-links" aria-label="Enlaces del pie de página">
+      <a href="../index.html#que-es-invertir">Qué es invertir</a>
+      <a href="../index.html#etfs">ETFs históricos</a>
+      <a href="../index.html#calculadoras">Calculadoras</a>
+      <a href="index.html">Blog</a>
+      <a href="../privacy-policy.html">Privacidad y cookies</a>
+    </nav>
+  </div>
+  <div class="legal-notice">
+    <p><strong>Aviso legal:</strong> Todo el contenido de este sitio tiene fines exclusivamente educativos e informativos. No constituye asesoramiento financiero, fiscal ni legal personalizado. Invertir implica riesgos, incluyendo la posible pérdida parcial o total del capital invertido.</p>
+    <p>© <span id="year"></span> Academia de Inversión. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <p>Usamos cookies propias y de terceros (incluido Google AdSense) para analizar el tráfico y mostrar publicidad. Más información en nuestra <a href="../privacy-policy.html">Política de privacidad y cookies</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-ghost" id="cookieReject">Rechazar</button>
+    <button class="btn btn-primary" id="cookieAccept">Aceptar</button>
+  </div>
+</div>
+
+<script src="../blog.js" defer></script>
+</body>
+</html>
