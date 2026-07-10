@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de interés compuesto avanzada — Academia de Inversión</title>
+<meta name="description" content="Calculadora de interés compuesto avanzada con aportes mensuales crecientes y ajuste por inflación. Visualiza el resultado en un gráfico interactivo.">
+<meta name="keywords" content="calculadora interés compuesto, calculadora interés compuesto avanzada, simulador de inversión, calculadora ahorro">
+<meta name="author" content="Academia de Inversión">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.academiadeinversion.com/calculadoras/interes-compuesto-avanzada.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.academiadeinversion.com/calculadoras/interes-compuesto-avanzada.html">
+<meta property="og:title" content="Calculadora de interés compuesto avanzada">
+<meta property="og:description" content="Simula tu inversión con aportes crecientes y ajuste por inflación, con gráfico interactivo.">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calculadora de interés compuesto avanzada">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23101C2C'/%3E%3Cpath d='M20 68 L38 48 L52 60 L80 28' stroke='%23B8863E' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../blog.css">
+<link rel="stylesheet" href="../calculadoras.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de interés compuesto avanzada",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "url": "https://www.academiadeinversion.com/calculadoras/interes-compuesto-avanzada.html",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.academiadeinversion.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Calculadoras", "item": "https://www.academiadeinversion.com/calculadoras/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "Interés compuesto avanzada", "item": "https://www.academiadeinversion.com/calculadoras/interes-compuesto-avanzada.html"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar" aria-label="Navegación principal">
+    <a href="../index.html" class="brand">
+      <svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="20" fill="currentColor" class="brand-bg"/><path d="M20 68 L38 48 L52 60 L80 28" stroke="var(--color-brass)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Academia<em>de Inversión</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#calculadoras">Calculadoras home</a></li>
+      <li><a href="index.html">Todas las calculadoras</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo claro/oscuro" aria-pressed="false">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main>
+<nav class="breadcrumbs" aria-label="Migas de pan">
+  <a href="../index.html">Inicio</a> / <a href="index.html">Calculadoras</a> / <span aria-current="page">Interés compuesto avanzada</span>
+</nav>
+
+<section class="calc-hero">
+  <p class="eyebrow">Calculadora</p>
+  <h1>Calculadora de interés compuesto avanzada</h1>
+  <p>Añade aportes mensuales crecientes cada año y visualiza el efecto de la inflación sobre el valor final de tu inversión.</p>
+</section>
+
+<div class="calc-page-panel">
+  <div class="calc-panel">
+    <form class="calc-form" id="compoundAdvForm">
+      <div class="field">
+        <label for="caInitial">Capital inicial (€)</label>
+        <input type="number" id="caInitial" min="0" step="100" value="2000">
+      </div>
+      <div class="field">
+        <label for="caMonthly">Aporte mensual inicial (€)</label>
+        <input type="number" id="caMonthly" min="0" step="10" value="200">
+      </div>
+      <div class="field">
+        <label for="caMonthlyGrowth">Crecimiento anual del aporte (%)</label>
+        <input type="number" id="caMonthlyGrowth" min="0" max="20" step="0.5" value="3">
+      </div>
+      <div class="field">
+        <label for="caRate">Rendimiento anual estimado (%)</label>
+        <input type="number" id="caRate" min="0" max="30" step="0.1" value="8">
+      </div>
+      <div class="field">
+        <label for="caYears">Años</label>
+        <input type="number" id="caYears" min="1" max="60" step="1" value="25">
+      </div>
+      <div class="field">
+        <label for="caInflation">Inflación anual estimada (%)</label>
+        <input type="number" id="caInflation" min="0" max="15" step="0.1" value="3">
+      </div>
+      <div class="calc-toggle-row">
+        <input type="checkbox" id="caAdjustInflation">
+        <label for="caAdjustInflation">Mostrar valor final ajustado por inflación</label>
+      </div>
+    </form>
+
+    <div class="calc-results">
+      <div class="result-cards">
+        <div class="result-card"><span class="result-label">Capital aportado</span><span class="result-value" id="caResContributed">0 €</span></div>
+        <div class="result-card"><span class="result-label">Ganancias</span><span class="result-value" id="caResGains">0 €</span></div>
+        <div class="result-card result-card-accent"><span class="result-label">Valor final</span><span class="result-value" id="caResFinal">0 €</span></div>
+        <div class="result-card" style="display:none"><span class="result-label">Valor final real (ajustado)</span><span class="result-value" id="caResReal">0 €</span></div>
+      </div>
+      <div class="chart-wrap"><canvas id="caChart"></canvas></div>
+    </div>
+  </div>
+</div>
+
+<div class="calc-explainer">
+  <h2>Cómo usar esta calculadora</h2>
+  <p>A diferencia de la calculadora básica de la página principal, esta versión te permite simular un aporte mensual que crece cada año (por ejemplo, si esperas ir aportando más a medida que suben tus ingresos), y comparar el valor final nominal con su equivalente ajustado por inflación.</p>
+
+  <h2>Qué significa "ajustado por inflación"</h2>
+  <p>El valor nominal es la cifra que verás en tu cuenta al final del periodo. El valor real, ajustado por <a class="inline-link" href="../blog/inflacion.html">inflación</a>, representa cuánto podrías comprar realmente con ese dinero al ritmo de precios estimado, lo que suele dar una imagen más honesta del resultado.</p>
+
+  <div class="article-callout">
+    <strong>Recuerda:</strong> esta calculadora usa una tasa de rendimiento constante como simplificación. En la realidad, los mercados no ofrecen rendimientos lineales año a año: hay periodos mejores y peores. Es una herramienta educativa, no una proyección garantizada.
+  </div>
+</div>
+
+<div class="calc-grid-links">
+  <a href="jubilacion.html"><span class="calc-link-tag">Calculadora</span>Calculadora de jubilación</a>
+  <a href="fire.html"><span class="calc-link-tag">Calculadora</span>Calculadora FIRE</a>
+  <a href="inflacion.html"><span class="calc-link-tag">Calculadora</span>Calculadora de inflación</a>
+  <a href="valor-futuro.html"><span class="calc-link-tag">Calculadora</span>Calculadora de valor futuro</a>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span>Academia<em>de Inversión</em></span>
+      <p>Educación financiera clara, sin jerga y sin promesas.</p>
+    </div>
+    <nav class="footer-links" aria-label="Enlaces del pie de página">
+      <a href="../index.html#que-es-invertir">Qué es invertir</a>
+      <a href="index.html">Calculadoras</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../privacy-policy.html">Privacidad y cookies</a>
+    </nav>
+  </div>
+  <div class="legal-notice">
+    <p><strong>Aviso legal:</strong> Esta calculadora tiene fines exclusivamente educativos. Los resultados son estimaciones basadas en los datos introducidos y no constituyen asesoramiento financiero ni una proyección garantizada. Invertir implica riesgos, incluyendo la posible pérdida parcial o total del capital invertido.</p>
+    <p>© <span id="year"></span> Academia de Inversión. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <p>Usamos cookies propias y de terceros (incluido Google AdSense) para analizar el tráfico y mostrar publicidad. Más información en nuestra <a href="../privacy-policy.html">Política de privacidad y cookies</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-ghost" id="cookieReject">Rechazar</button>
+    <button class="btn btn-primary" id="cookieAccept">Aceptar</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="../calculadoras.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de jubilación — Academia de Inversión</title>
+<meta name="description" content="Calcula el capital que podrías acumular de cara a la jubilación según tu edad, ahorro actual, aportes mensuales y rendimiento esperado, con gráfico interactivo.">
+<meta name="keywords" content="calculadora de jubilación, cuánto ahorrar para jubilarme, calculadora pensión privada, planificar jubilación">
+<meta name="author" content="Academia de Inversión">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.academiadeinversion.com/calculadoras/jubilacion.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.academiadeinversion.com/calculadoras/jubilacion.html">
+<meta property="og:title" content="Calculadora de jubilación">
+<meta property="og:description" content="Calcula el capital proyectado de cara a la jubilación según tus aportes y rendimiento esperado.">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calculadora de jubilación">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23101C2C'/%3E%3Cpath d='M20 68 L38 48 L52 60 L80 28' stroke='%23B8863E' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../blog.css">
+<link rel="stylesheet" href="../calculadoras.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de jubilación",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "url": "https://www.academiadeinversion.com/calculadoras/jubilacion.html",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.academiadeinversion.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Calculadoras", "item": "https://www.academiadeinversion.com/calculadoras/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "Jubilación", "item": "https://www.academiadeinversion.com/calculadoras/jubilacion.html"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar" aria-label="Navegación principal">
+    <a href="../index.html" class="brand">
+      <svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="20" fill="currentColor" class="brand-bg"/><path d="M20 68 L38 48 L52 60 L80 28" stroke="var(--color-brass)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Academia<em>de Inversión</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#calculadoras">Calculadoras home</a></li>
+      <li><a href="index.html">Todas las calculadoras</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo claro/oscuro" aria-pressed="false">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main>
+<nav class="breadcrumbs" aria-label="Migas de pan">
+  <a href="../index.html">Inicio</a> / <a href="index.html">Calculadoras</a> / <span aria-current="page">Jubilación</span>
+</nav>
+
+<section class="calc-hero">
+  <p class="eyebrow">Calculadora</p>
+  <h1>Calculadora de jubilación</h1>
+  <p>Proyecta el capital que podrías acumular hasta tu jubilación y compáralo con una estimación de lo que podrías necesitar.</p>
+</section>
+
+<div class="calc-page-panel">
+  <div class="calc-panel">
+    <form class="calc-form" id="retirementForm">
+      <div class="field">
+        <label for="retCurrentAge">Edad actual</label>
+        <input type="number" id="retCurrentAge" min="16" max="80" step="1" value="30">
+      </div>
+      <div class="field">
+        <label for="retRetireAge">Edad de jubilación deseada</label>
+        <input type="number" id="retRetireAge" min="17" max="90" step="1" value="65">
+      </div>
+      <div class="field">
+        <label for="retCurrentSavings">Ahorro/inversión actual (€)</label>
+        <input type="number" id="retCurrentSavings" min="0" step="500" value="5000">
+      </div>
+      <div class="field">
+        <label for="retMonthly">Aporte mensual (€)</label>
+        <input type="number" id="retMonthly" min="0" step="10" value="300">
+      </div>
+      <div class="field">
+        <label for="retRate">Rendimiento anual estimado (%)</label>
+        <input type="number" id="retRate" min="0" max="20" step="0.1" value="7">
+      </div>
+      <div class="field">
+        <label for="retAnnualSpend">Gasto anual estimado en la jubilación (€)</label>
+        <input type="number" id="retAnnualSpend" min="0" step="500" value="24000">
+      </div>
+      <div class="field">
+        <label for="retWithdrawalRate">Tasa de retiro anual (%)</label>
+        <input type="number" id="retWithdrawalRate" min="1" max="10" step="0.1" value="4">
+      </div>
+    </form>
+
+    <div class="calc-results">
+      <div class="result-cards">
+        <div class="result-card result-card-accent"><span class="result-label">Capital proyectado al jubilarte</span><span class="result-value" id="retResCapital">0 €</span></div>
+        <div class="result-card"><span class="result-label">Capital estimado necesario</span><span class="result-value" id="retResNeeded">0 €</span></div>
+        <div class="result-card result-card-note" id="retResStatus"></div>
+      </div>
+      <div class="chart-wrap"><canvas id="retChart"></canvas></div>
+    </div>
+  </div>
+</div>
+
+<div class="calc-explainer">
+  <h2>Cómo se calcula el "capital estimado necesario"</h2>
+  <p>Esta calculadora usa la lógica de la tasa de retiro: si retiras un porcentaje fijo de tu capital cada año (por ejemplo, un 4%), el capital necesario es tu gasto anual dividido entre esa tasa. Es una simplificación ampliamente utilizada, no una garantía de que el capital vaya a durar exactamente ese tiempo.</p>
+
+  <h2>Qué variables mueven más el resultado</h2>
+  <ul>
+    <li>El <strong>tiempo hasta la jubilación</strong> es, con diferencia, la variable más influyente por el efecto del <a class="inline-link" href="../blog/interes-compuesto.html">interés compuesto</a>.</li>
+    <li>El <strong>rendimiento esperado</strong> es incierto: usa un valor conservador antes que optimista.</li>
+    <li>La <strong>tasa de retiro</strong> elegida determina cuánto capital necesitas: una tasa más baja implica más capital necesario, pero mayor probabilidad de que dure.</li>
+  </ul>
+
+  <div class="article-callout">
+    <strong>Recuerda:</strong> esta herramienta no tiene en cuenta pensiones públicas, impuestos ni gastos extraordinarios. Es un punto de partida para pensar en el problema, no un plan de jubilación completo.
+  </div>
+</div>
+
+<div class="calc-grid-links">
+  <a href="fire.html"><span class="calc-link-tag">Calculadora</span>Calculadora FIRE</a>
+  <a href="interes-compuesto-avanzada.html"><span class="calc-link-tag">Calculadora</span>Interés compuesto avanzada</a>
+  <a href="inflacion.html"><span class="calc-link-tag">Calculadora</span>Calculadora de inflación</a>
+  <a href="valor-futuro.html"><span class="calc-link-tag">Calculadora</span>Calculadora de valor futuro</a>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span>Academia<em>de Inversión</em></span>
+      <p>Educación financiera clara, sin jerga y sin promesas.</p>
+    </div>
+    <nav class="footer-links" aria-label="Enlaces del pie de página">
+      <a href="../index.html#que-es-invertir">Qué es invertir</a>
+      <a href="index.html">Calculadoras</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../privacy-policy.html">Privacidad y cookies</a>
+    </nav>
+  </div>
+  <div class="legal-notice">
+    <p><strong>Aviso legal:</strong> Esta calculadora tiene fines exclusivamente educativos y no constituye asesoramiento financiero ni de planificación de jubilación personalizado. No tiene en cuenta pensiones públicas, impuestos ni otros factores relevantes de tu situación real.</p>
+    <p>© <span id="year"></span> Academia de Inversión. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <p>Usamos cookies propias y de terceros (incluido Google AdSense) para analizar el tráfico y mostrar publicidad. Más información en nuestra <a href="../privacy-policy.html">Política de privacidad y cookies</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-ghost" id="cookieReject">Rechazar</button>
+    <button class="btn btn-primary" id="cookieAccept">Aceptar</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="../calculadoras.js" defer></script>
+</body>
+</html>

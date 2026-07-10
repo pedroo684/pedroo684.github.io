@@ -1,0 +1,51 @@
+/* ==========================================================================
+   calculadoras.css — Estilos ADITIVOS para la sección de calculadoras.
+   Se carga junto a style.css (que ya define .calc-panel, .field, .result-card,
+   etc.) y blog.css (que define .breadcrumbs, .article-callout, .related-articles).
+   Este archivo solo añade lo específico de las páginas de calculadora.
+   ========================================================================== */
+
+.calc-hero { max-width: 780px; margin: 0 auto; padding: 8.5rem 1.5rem 1rem; }
+.calc-hero .eyebrow { margin-bottom: 0.8rem; }
+.calc-hero h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); margin-bottom: 0.9rem; line-height: 1.15; }
+.calc-hero p { color: var(--text-muted); font-size: 1.02rem; max-width: 60ch; }
+
+.calc-page-panel { max-width: 900px; margin: 2.5rem auto; padding: 0 1.5rem; }
+
+.calc-explainer { max-width: 780px; margin: 3rem auto; padding: 0 1.5rem; }
+.calc-explainer h2 { font-size: 1.25rem; margin: 1.8rem 0 0.7rem; }
+.calc-explainer p { color: var(--text-muted); font-size: 0.98rem; margin-bottom: 1rem; max-width: 68ch; }
+.calc-explainer ul { margin: 0 0 1rem 1.2rem; }
+.calc-explainer li { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.4rem; }
+
+.formula-box {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: 1.2rem 1.4rem; margin: 1.2rem 0; font-family: var(--font-mono); font-size: 0.9rem;
+  color: var(--text); overflow-x: auto;
+}
+
+.calc-grid-links {
+  max-width: 900px; margin: 3rem auto 5rem; padding: 0 1.5rem;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;
+}
+.calc-grid-links a {
+  display: block; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: 1.1rem 1.3rem; font-size: 0.9rem; transition: border-color 0.2s, transform 0.2s;
+}
+.calc-grid-links a:hover { border-color: var(--accent); transform: translateY(-2px); }
+.calc-grid-links .calc-link-tag { display: block; font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
+
+.calc-toggle-row { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.4rem; }
+.calc-toggle-row input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--accent); }
+.calc-toggle-row label { font-size: 0.85rem; color: var(--text-muted); }
+
+.field select {
+  background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 0.7rem 0.9rem; color: var(--text); font-family: var(--font-body); font-size: 0.92rem; width: 100%;
+}
+
+.result-card-note { grid-column: 1 / -1; font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono); }
+
+@media (max-width: 600px) {
+  .calc-hero, .calc-explainer, .calc-page-panel, .calc-grid-links { padding-left: 1.1rem; padding-right: 1.1rem; }
+}
