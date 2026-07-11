@@ -1,0 +1,83 @@
+/* ==========================================================================
+   herramientas.css — Estilos ADITIVOS para la sección "Herramientas"
+   (simulador de portafolios, comparador de ETFs...).
+   No reemplaza a style.css: se carga junto a él y hereda sus variables
+   de color, tipografía y modo claro/oscuro.
+   ========================================================================== */
+
+.tool-hero { max-width: var(--container); margin: 0 auto; padding: 8.5rem 1.5rem 2rem; }
+.tool-hero h1 { font-size: clamp(2rem, 4vw, 2.6rem); margin-bottom: 0.8rem; }
+.tool-hero p { color: var(--text-muted); max-width: 60ch; font-size: 1.02rem; }
+
+.tool-layout {
+  max-width: var(--container); margin: 0 auto; padding: 0 1.5rem 5rem;
+  display: grid; grid-template-columns: 360px 1fr; gap: 2rem; align-items: start;
+}
+
+/* ---------- Allocation form ---------- */
+.allocation-panel {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 1.8rem; box-shadow: var(--shadow); position: sticky; top: 90px;
+}
+.allocation-panel h2 { font-size: 1.05rem; margin-bottom: 1.2rem; }
+.asset-row { margin-bottom: 1.1rem; }
+.asset-row-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.35rem; }
+.asset-row-head label { font-size: 0.88rem; font-weight: 500; }
+.asset-row-head output { font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); font-weight: 600; }
+.asset-row input[type="range"] {
+  width: 100%; -webkit-appearance: none; appearance: none; height: 6px; border-radius: 100px;
+  background: var(--bg-alt); outline: none;
+}
+.asset-row input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--accent); cursor: pointer; border: 2px solid var(--card-bg);
+}
+.asset-row input[type="range"]::-moz-range-thumb {
+  width: 16px; height: 16px; border-radius: 50%; background: var(--accent); cursor: pointer; border: 2px solid var(--card-bg);
+}
+
+.allocation-total {
+  display: flex; justify-content: space-between; align-items: center; margin-top: 1.3rem;
+  padding: 0.8rem 1rem; border-radius: var(--radius-sm); background: var(--bg-alt);
+  font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600;
+}
+.allocation-total.is-valid { color: var(--color-emerald); }
+.allocation-total.is-invalid { color: var(--color-signal); }
+
+.tool-inputs-extra { margin-top: 1.3rem; padding-top: 1.3rem; border-top: 1px solid var(--border); display: grid; gap: 0.9rem; }
+.tool-inputs-extra .field label { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.3rem; display: block; }
+.tool-inputs-extra .field input {
+  width: 100%; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 0.6rem 0.8rem; color: var(--text); font-family: var(--font-mono); font-size: 0.9rem;
+}
+
+/* ---------- Results ---------- */
+.tool-results { display: flex; flex-direction: column; gap: 1.4rem; }
+.result-summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; }
+.result-summary-card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: 1.1rem 1.3rem;
+}
+.result-summary-card .label { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted); }
+.result-summary-card .value { font-size: 1.5rem; font-family: var(--font-mono); font-weight: 600; margin-top: 0.3rem; }
+.result-summary-card .sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+.charts-row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 1.4rem; }
+.chart-card {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-md);
+  padding: 1.4rem; box-shadow: var(--shadow);
+}
+.chart-card h3 { font-size: 0.95rem; margin-bottom: 1rem; }
+.chart-card-canvas-wrap { height: 260px; position: relative; }
+
+.risk-meter { display: flex; gap: 4px; margin-top: 0.5rem; }
+.risk-meter span { flex: 1; height: 6px; border-radius: 100px; background: var(--bg-alt); }
+.risk-meter span.filled-low { background: var(--color-emerald); }
+.risk-meter span.filled-mid { background: var(--accent); }
+.risk-meter span.filled-high { background: var(--color-signal); }
+
+@media (max-width: 900px) {
+  .tool-layout { grid-template-columns: 1fr; }
+  .allocation-panel { position: static; }
+  .charts-row { grid-template-columns: 1fr; }
+}

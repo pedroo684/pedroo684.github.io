@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador de portafolios: riesgo, rentabilidad y diversificación — Academia de Inversión</title>
+<meta name="description" content="Reparte porcentajes entre S&P 500, Nasdaq, bonos, oro, Bitcoin, REITs y efectivo, y visualiza al instante el riesgo estimado, la rentabilidad esperada y la diversificación de tu cartera.">
+<meta name="keywords" content="simulador de portafolios, simulador de cartera, calculadora de asignación de activos, riesgo y rentabilidad cartera, diversificación cartera">
+<meta name="author" content="Academia de Inversión">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.academiadeinversion.com/herramientas/simulador-portafolios.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.academiadeinversion.com/herramientas/simulador-portafolios.html">
+<meta property="og:title" content="Simulador de portafolios: riesgo, rentabilidad y diversificación">
+<meta property="og:description" content="Reparte porcentajes entre 7 clases de activo y visualiza al instante el riesgo, la rentabilidad esperada y la diversificación de tu cartera.">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Simulador de portafolios: riesgo, rentabilidad y diversificación">
+<meta name="twitter:description" content="Reparte porcentajes entre 7 clases de activo y visualiza el resultado al instante.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23101C2C'/%3E%3Cpath d='M20 68 L38 48 L52 60 L80 28' stroke='%23B8863E' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../blog.css">
+<link rel="stylesheet" href="../herramientas.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.academiadeinversion.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Herramientas", "item": "https://www.academiadeinversion.com/herramientas/index.html"},
+    {"@type": "ListItem", "position": 3, "name": "Simulador de portafolios", "item": "https://www.academiadeinversion.com/herramientas/simulador-portafolios.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Simulador de portafolios",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any (web browser)",
+  "url": "https://www.academiadeinversion.com/herramientas/simulador-portafolios.html",
+  "description": "Herramienta interactiva para repartir porcentajes entre distintas clases de activo y visualizar el riesgo estimado, la rentabilidad esperada y la diversificación resultante.",
+  "isAccessibleForFree": true,
+  "publisher": {"@type": "Organization", "name": "Academia de Inversión"}
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar" aria-label="Navegación principal">
+    <a href="../index.html" class="brand">
+      <svg width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="20" fill="currentColor" class="brand-bg"/><path d="M20 68 L38 48 L52 60 L80 28" stroke="var(--color-brass)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Academia<em>de Inversión</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#calculadoras">Calculadoras</a></li>
+      <li><a href="../blog/index.html">Blog</a></li>
+      <li><a href="index.html">Herramientas</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo claro/oscuro" aria-pressed="false">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main>
+<nav class="breadcrumbs" aria-label="Migas de pan">
+  <a href="../index.html">Inicio</a> / <a href="index.html">Herramientas</a> / <span aria-current="page">Simulador de portafolios</span>
+</nav>
+
+<section class="tool-hero">
+  <p class="eyebrow">Simulador</p>
+  <h1>Simulador de portafolios</h1>
+  <p>Reparte el 100% entre siete clases de activo y observa al instante cómo cambian el riesgo estimado, la rentabilidad esperada y la diversificación de tu cartera. Es una herramienta educativa, no una recomendación de inversión.</p>
+</section>
+
+<div class="tool-layout">
+  <div class="allocation-panel">
+    <h2>Composición de la cartera</h2>
+
+    <div class="asset-row">
+      <div class="asset-row-head"><label for="asset-sp500">S&amp;P 500</label><output id="out-sp500">30%</output></div>
+      <input type="range" id="asset-sp500" min="0" max="100" step="1" value="30">
+    </div>
+    <div class="asset-row">
+      <div class="asset-row-head"><label for="asset-nasdaq">Nasdaq-100</label><output id="out-nasdaq">15%</output></div>
+      <input type="range" id="asset-nasdaq" min="0" max="100" step="1" value="15">
+    </div>
+    <div class="asset-row">
+      <div class="asset-row-head"><label for="asset-bonos">Bonos</label><output id="out-bonos">25%</output></div>
+      <input type="range" id="asset-bonos" min="0" max="100" step="1" value="25">
+    </div>
+    <div class="asset-row">
+      <div class="asset-row-head"><label for="asset-oro">Oro</label><output id="out-oro">10%</output></div>
+      <input type="range" id="asset-oro" min="0" max="100" step="1" value="10">
+    </div>
+    <div class="asset-row">
+      <div class="asset-row-head"><label for="asset-bitcoin">Bitcoin</label><output id="out-bitcoin">5%</output></div>
+      <input type="range" id="asset-bitcoin" min="0" max="100" step="1" value="5">
+    </div>
+    <div class="asset-row">
+      <div class="asset-row-head"><label for="asset-reits">REITs</label><output id="out-reits">10%</output></div>
+      <input type="range" id="asset-reits" min="0" max="100" step="1" value="10">
+    </div>
+    <div class="asset-row">
+      <div class="asset-row-head"><label for="asset-efectivo">Efectivo</label><output id="out-efectivo">5%</output></div>
+      <input type="range" id="asset-efectivo" min="0" max="100" step="1" value="5">
+    </div>
+
+    <div class="allocation-total" id="allocationTotal">Total: 100%</div>
+
+    <div class="tool-inputs-extra">
+      <div class="field">
+        <label for="simInitial">Capital inicial (€)</label>
+        <input type="number" id="simInitial" min="0" step="500" value="10000">
+      </div>
+      <div class="field">
+        <label for="simYears">Años a simular</label>
+        <input type="number" id="simYears" min="1" max="50" step="1" value="20">
+      </div>
+    </div>
+  </div>
+
+  <div class="tool-results">
+    <div class="result-summary-grid">
+      <div class="result-summary-card">
+        <span class="label">Rentabilidad esperada</span>
+        <div class="value" id="resExpectedReturn">0% anual</div>
+        <div class="sub">Media ponderada aproximada</div>
+      </div>
+      <div class="result-summary-card">
+        <span class="label">Riesgo estimado</span>
+        <div class="value" id="resRisk">—</div>
+        <div class="sub" id="resRiskValue">Volatilidad aprox. 0</div>
+        <div class="risk-meter" id="riskMeter"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="result-summary-card">
+        <span class="label">Diversificación</span>
+        <div class="value" id="resDiversification">—</div>
+        <div class="sub" id="resDiversificationValue">Puntuación 0/100</div>
+      </div>
+    </div>
+
+    <div class="charts-row">
+      <div class="chart-card">
+        <h3>Composición de la cartera</h3>
+        <div class="chart-card-canvas-wrap"><canvas id="pieChart"></canvas></div>
+      </div>
+      <div class="chart-card">
+        <h3>Proyección de crecimiento (optimista / esperado / pesimista)</h3>
+        <div class="chart-card-canvas-wrap"><canvas id="growthChart"></canvas></div>
+      </div>
+    </div>
+
+    <div class="article-callout" style="margin:0;">
+      <strong>Cómo leer estos resultados:</strong> la rentabilidad y el riesgo por clase de activo son aproximaciones educativas basadas en promedios históricos de largo plazo, simplificadas con fines pedagógicos. El riesgo combinado se calcula como una media ponderada simple y no tiene en cuenta la correlación real entre activos, por lo que es una estimación orientativa y no un modelo profesional de gestión de carteras. El rendimiento pasado no garantiza resultados futuros.
+    </div>
+  </div>
+</div>
+
+<section class="section" style="padding-top:0;">
+  <div class="article-faq">
+    <h2>Preguntas frecuentes sobre el simulador</h2>
+    <details>
+      <summary>¿De dónde salen las cifras de rentabilidad y riesgo de cada activo?</summary>
+      <p>Son aproximaciones educativas basadas en promedios históricos de largo plazo de cada clase de activo, simplificadas para fines pedagógicos. No representan una predicción ni una garantía de resultados futuros.</p>
+    </details>
+    <details>
+      <summary>¿Por qué el riesgo combinado no tiene en cuenta la correlación entre activos?</summary>
+      <p>Modelar la correlación real entre activos requiere datos históricos detallados y supuestos estadísticos más avanzados. Este simulador usa una media ponderada simple para mantener la herramienta accesible y fácil de entender, a costa de precisión técnica.</p>
+    </details>
+    <details>
+      <summary>¿Esta herramienta me dice cómo debo invertir mi dinero?</summary>
+      <p>No. Es una herramienta educativa para explorar cómo distintas combinaciones de activos afectan al riesgo y la rentabilidad esperada, no una recomendación de inversión personalizada.</p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span>Academia<em>de Inversión</em></span>
+      <p>Educación financiera clara, sin jerga y sin promesas.</p>
+    </div>
+    <nav class="footer-links" aria-label="Enlaces del pie de página">
+      <a href="../index.html#que-es-invertir">Qué es invertir</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../index.html#calculadoras">Calculadoras</a>
+      <a href="index.html">Herramientas</a>
+      <a href="../privacy-policy.html">Privacidad y cookies</a>
+    </nav>
+  </div>
+  <div class="legal-notice">
+    <p><strong>Aviso legal:</strong> Todo el contenido de este sitio, incluidas sus herramientas interactivas, tiene fines exclusivamente educativos e informativos. No constituye asesoramiento financiero, fiscal ni legal personalizado. Invertir implica riesgos, incluyendo la posible pérdida parcial o total del capital invertido. Los datos de rentabilidad y riesgo usados en el simulador son aproximados y <strong>no garantizan resultados futuros</strong>.</p>
+    <p>© <span id="year"></span> Academia de Inversión. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Aviso de cookies">
+  <p>Usamos cookies propias y de terceros (incluido Google AdSense) para analizar el tráfico y mostrar publicidad. Más información en nuestra <a href="../privacy-policy.html">Política de privacidad y cookies</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-ghost" id="cookieReject">Rechazar</button>
+    <button class="btn btn-primary" id="cookieAccept">Aceptar</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+<script src="../herramientas.js" defer></script>
+<script src="simulador-portafolios.js" defer></script>
+</body>
+</html>
