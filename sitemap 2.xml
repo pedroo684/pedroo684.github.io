@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  sitemap.xml — Invierte360
+  Ubicación: raíz del repositorio (mismo nivel que index.html)
+  Lista todas las URLs públicas reales del sitio, usando el dominio
+  donde está publicado (GitHub Pages). Si en el futuro conectas un
+  dominio propio, actualiza aquí todas las URLs por el nuevo dominio.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Página principal -->
+  <url>
+    <loc>https://pedroo684.github.io/Invierte360/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Página "Sobre nosotros" -->
+  <url>
+    <loc>https://pedroo684.github.io/Invierte360/sobre.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Artículos educativos -->
+  <url>
+    <loc>https://pedroo684.github.io/Invierte360/articulos/que-es-un-etf.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pedroo684.github.io/Invierte360/articulos/interes-compuesto.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pedroo684.github.io/Invierte360/articulos/como-empezar-a-invertir.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Política de privacidad (ya publicada) -->
+  <url>
+    <loc>https://pedroo684.github.io/Invierte360/privacy-policy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

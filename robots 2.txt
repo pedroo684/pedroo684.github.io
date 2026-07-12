@@ -1,0 +1,9 @@
+# robots.txt — Invierte360
+# Ubicación: raíz del repositorio (mismo nivel que index.html)
+# Permite el rastreo completo del sitio a todos los buscadores
+# y señala dónde está el sitemap para facilitar la indexación.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://pedroo684.github.io/Invierte360/sitemap.xml

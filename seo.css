@@ -1,0 +1,85 @@
+/* ==========================================================================
+   seo.css — Invierte360
+   Ubicación: raíz del repositorio (junto a style.css)
+   Hoja de estilos ADITIVA: se carga DESPUÉS de style.css y solo añade
+   ajustes de legibilidad, accesibilidad y experiencia móvil. No
+   redefine colores ni el layout general — hereda las variables ya
+   definidas en style.css (--bg, --text, --accent, --border, etc.)
+   para no romper el diseño ni la paleta actuales.
+   ========================================================================== */
+
+/* 1) Legibilidad de párrafos largos: limita el ancho de línea óptimo
+      para lectura (evita líneas demasiado largas en pantallas anchas,
+      un problema común en artículos educativos extensos). */
+.article-body p,
+.ledger-card p,
+.concept-card p {
+  max-width: 68ch;
+}
+
+/* 2) Tamaño de fuente base ligeramente mayor en móvil para reducir
+      la fatiga de lectura sin necesidad de hacer zoom. */
+@media (max-width: 480px) {
+  body { font-size: 16.5px; }
+  h1 { line-height: 1.2 !important; }
+  .hero-sub, .section-head p { font-size: 1rem !important; }
+}
+
+/* 3) Área de toque mínima recomendada (44x44px) para enlaces y
+      botones en móvil, mejorando la accesibilidad táctil. */
+@media (max-width: 760px) {
+  .nav-links a, .btn, .accordion-trigger, .cookie-actions .btn {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* 4) Estado de foco más visible en todos los elementos interactivos,
+      importante para accesibilidad (navegación por teclado) y para
+      cumplir mejor las pautas que Google valora en Core Web Vitals /
+      experiencia de página. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--accent, #a8763a);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* 5) Evita el "salto" de layout al cargar Google Fonts (mejora el
+      Cumulative Layout Shift, una de las métricas de Core Web Vitals). */
+body {
+  font-display: swap;
+  text-rendering: optimizeLegibility;
+}
+
+/* 6) Tablas responsivas: en pantallas muy pequeñas, permite scroll
+      horizontal suave con indicación visual, en vez de que la tabla
+      se salga del viewport de forma brusca. */
+@media (max-width: 480px) {
+  .table-wrap {
+    -webkit-overflow-scrolling: touch;
+    box-shadow: inset -12px 0 12px -12px rgba(0,0,0,0.15);
+  }
+}
+
+/* 7) Mejora el contraste del texto secundario en modo claro para
+      cumplir mejor el ratio mínimo de contraste (WCAG AA) en textos
+      pequeños, sin cambiar el tono general de la paleta. */
+:root {
+  --text-muted-readable: #4a5866;
+}
+.hero-sub, .section-head p, .article-meta {
+  color: var(--text-muted-readable);
+}
+[data-theme="dark"] .hero-sub,
+[data-theme="dark"] .section-head p,
+[data-theme="dark"] .article-meta {
+  color: var(--text-muted, #93a2b0);
+}
+
+/* 8) Evita que las imágenes o SVG decorativos se desborden en
+      pantallas pequeñas. */
+img, svg { max-width: 100%; height: auto; }
